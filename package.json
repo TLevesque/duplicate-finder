@@ -1,10 +1,10 @@
 {
-  "name": "import-to-require",
-  "displayName": "Import To Require Syntax",
-  "description": "Convert ES6 module import syntax to ES5 require syntax",
-  "version": "0.6.0",
+  "name": "duplicate-finder",
+  "displayName": "Find duplicate lines",
+  "description": "Identify and list duplicate lines",
+  "version": "0.0.1",
   "publisher": "tlevesque",
-  "repository": "https://github.com/TLevesque/import-2-require.git",
+  "repository": "https://github.com/TLevesque/duplicate-finder.git",
   "engines": {
     "vscode": "^1.27.2"
   },
@@ -12,32 +12,32 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.replaceAllImports",
-    "onCommand:extension.replaceAllExports"
+    "onCommand:extension.findDuplicateLines",
+    "onCommand:extension.countDuplicateLines"
   ],
   "main": "./extension",
   "contributes": {
     "commands": [
       {
-        "command": "extension.replaceAllImports",
-        "title": "Convert Imports to Require"
+        "command": "extension.findDuplicateLines",
+        "title": "Duplicate Finder: Find and list duplicate lines"
       },
       {
-        "command": "extension.replaceAllExports",
-        "title": "Convert ES6 Export to CJS Export"
+        "command": "extension.countDuplicateLines",
+        "title": "Duplicate Finder: Find, list and count duplicate lines"
       }
     ],
     "keybindings": [
       {
-        "command": "extension.replaceAllImports",
-        "key": "ctrl+alt+m",
-        "mac": "ctrl+alt+m",
+        "command": "extension.findDuplicateLines",
+        "key": "ctrl+alt+l",
+        "mac": "ctrl+alt+l",
         "when": "editorTextFocus"
       },
       {
-        "command": "extension.replaceAllExports",
-        "key": "ctrl+alt+p",
-        "mac": "ctrl+alt+p",
+        "command": "extension.countDuplicateLines",
+        "key": "ctrl+alt+k",
+        "mac": "ctrl+alt+k",
         "when": "editorTextFocus"
       }
     ]
