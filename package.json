@@ -1,9 +1,9 @@
 {
   "name": "duplicate-finder",
-  "displayName": "Find duplicate lines",
+  "displayName": "Duplicate-lines-finder",
   "description": "Identify and list duplicate lines",
   "version": "0.0.1",
-  "publisher": "tlevesque",
+  "publisher": "tlevesque2",
   "repository": "https://github.com/TLevesque/duplicate-finder.git",
   "engines": {
     "vscode": "^1.27.2"
