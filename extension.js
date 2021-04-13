@@ -19,27 +19,29 @@ const parseString = (string, count, all, unique) => {
 
     if (all) {
       returnedString = Object.entries(aggregateStringObj)
-        .map(el => (count ? `${el[0]}: ${el[1]}` : el[0]))
+        .map(el => `${el[0]}: ${el[1]}`)
         .join("\n");
+      if (returnedString.length === 0) return `\n=> No lines`;
+      return `\n=> All lines:\n${returnedString}`;
     }
     if (!all) {
       if (unique) {
         returnedString = Object.entries(aggregateStringObj)
           .filter(el => el[1] === 1)
-          .map(el => (count ? `${el[0]}: ${el[1]}` : el[0]))
+          .map(el => el[0])
           .join("\n");
+        if (returnedString.length === 0) return `\n=> No single line`;
+        return `\n=> Single lines:\n${returnedString}`;
       }
       if (!unique) {
         returnedString = Object.entries(aggregateStringObj)
           .filter(el => el[1] > 1)
           .map(el => (count ? `${el[0]}: ${el[1]}` : el[0]))
           .join("\n");
+        if (returnedString.length === 0) return `\n=> No duplicate`;
+        return `\n=> Duplicates:\n${returnedString}`;
       }
     }
-
-    if (returnedString.length === 0) return `\n=> No duplicate`;
-
-    return `\n=> Duplicates:\n${returnedString}`;
   }
 };
 
