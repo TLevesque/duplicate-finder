@@ -2,7 +2,7 @@
   "name": "duplicate-finder",
   "displayName": "Duplicate-lines-finder",
   "description": "Identify and list duplicate lines",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "publisher": "tlevesque2",
   "repository": "https://github.com/TLevesque/duplicate-finder.git",
   "engines": {

@@ -21,7 +21,7 @@ const parseString = (string, count, all, unique) => {
       returnedString = Object.entries(aggregateStringObj)
         .map(el => `${el[0]}: ${el[1]}`)
         .join("\n");
-      if (returnedString.length === 0) return `\n=> No lines`;
+      if (returnedString.length === 0) return `\n=> No line`;
       return `\n=> All lines:\n${returnedString}`;
     }
     if (!all) {
@@ -38,7 +38,7 @@ const parseString = (string, count, all, unique) => {
           .filter(el => el[1] > 1)
           .map(el => (count ? `${el[0]}: ${el[1]}` : el[0]))
           .join("\n");
-        if (returnedString.length === 0) return `\n=> No duplicate`;
+        if (returnedString.length === 0) return `\n=> No duplicate line`;
         return `\n=> Duplicates:\n${returnedString}`;
       }
     }
