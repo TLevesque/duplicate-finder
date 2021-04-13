@@ -2,7 +2,7 @@
   "name": "duplicate-finder",
   "displayName": "Duplicate-lines-finder",
   "description": "Identify and list duplicate lines",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "publisher": "tlevesque2",
   "repository": "https://github.com/TLevesque/duplicate-finder.git",
   "engines": {
@@ -13,7 +13,9 @@
   ],
   "activationEvents": [
     "onCommand:extension.findDuplicateLines",
-    "onCommand:extension.countDuplicateLines"
+    "onCommand:extension.findUniqueLines",
+    "onCommand:extension.countDuplicateLines",
+    "onCommand:extension.countAllLines"
   ],
   "main": "./extension",
   "contributes": {
@@ -23,8 +25,16 @@
         "title": "Duplicate Finder: Find and list duplicate lines"
       },
       {
+        "command": "extension.findUniqueLines",
+        "title": "Duplicate Finder: Find and list unique lines"
+      },
+      {
         "command": "extension.countDuplicateLines",
         "title": "Duplicate Finder: Find, list and count duplicate lines"
+      },
+      {
+        "command": "extension.countAllLines",
+        "title": "Duplicate Finder: Find, list and count all lines"
       }
     ],
     "keybindings": [
