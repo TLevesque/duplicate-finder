@@ -75,7 +75,7 @@ function activate(context) {
       const selection = editor.selection;
       const text = editor.document.getText(selection);
 
-      insertText(text, { count: false, all: false, unique: true });
+      insertText(text, { count: false, all: false, unique: false });
     }
   );
   context.subscriptions.push(findDuplicateLines);
